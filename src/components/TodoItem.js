@@ -14,7 +14,7 @@ const TodoItem = (props) => {
     }
 
     const { completed, id, title } = props.todo
-    const { handleChangeProps, delTodo, setUpdate } = props
+    const { handleChange, delTodo, setUpdate } = props
     const { item, textInput } = styles
 
     const handleEditing = () => {
@@ -49,7 +49,7 @@ const TodoItem = (props) => {
                     type="checkbox"
                     className={styles.checkbox}
                     checked={completed}
-                    onChange={() => handleChangeProps(id)}
+                    onChange={() => handleChange(id)}
                 />
                 <button onClick={() => delTodo(id)}>
                     <FaTrash style={{ color: "orangered", fontSize: "16px" }} />

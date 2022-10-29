@@ -33,8 +33,7 @@ const TodoContainer = () => {
     }, [todos])
 
     const handleChange = (id) => {
-        setTodos(prevState => (
-            prevState.todos.map(todo => {
+        setTodos(todos.map(todo => {
                 if (todo.id === id) {
                     return {
                         ...todo,
@@ -43,7 +42,7 @@ const TodoContainer = () => {
                 }
                 return todo
             })
-        ))
+        )
     };
 
     const delTodo = id => {
@@ -89,7 +88,7 @@ const TodoContainer = () => {
                             <InputTodo addTodoProps={addTodoItem} />
                             <TodosList
                                 todos={todos}
-                                handleChangeProps={handleChange}
+                                handleChange={handleChange}
                                 delTodo={delTodo}
                                 setUpdate={setUpdate}
                             />
