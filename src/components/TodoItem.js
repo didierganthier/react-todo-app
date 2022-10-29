@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import styles from "./TodoItem.module.css"
 
 const TodoItem = (props) => {
+
+    const [isEditing, setEditing] = useState(false);
 
     const completedStyle = {
         fontStyle: "italic",
@@ -11,21 +13,54 @@ const TodoItem = (props) => {
     }
 
     const { completed, id, title } = props.todo
+    const { handleChangeProps, delTodo, setUpdate } = props
+    const { item, textInput } = styles
+
+    const handleEditing = () => {
+        setEditing(true);
+    }
+
+    let viewMode = {}
+    let editMode = {}
+
+    if (isEditing) {
+        viewMode.display = "none"
+    } else {
+        editMode.display = "none"
+    }
+
+    const handleUpdatedDone = event => {
+        if(event.key === "Enter") {
+            setEditing(false)
+        }
+    }
 
     return (
-        <li className={styles.item}>
+        <li className={item}>
+            <div onDoubleClick={handleEditing} style={viewMode}>
+                <input
+                    type="checkbox"
+                    className={styles.checkbox}
+                    checked={completed}
+                    onChange={() => handleChangeProps(id)}
+                />
+                <button onClick={() => delTodo(id)}>
+                    Delete
+                </button>
+                <span style={completed ? completedStyle : null}>
+                    {title}
+                </span>
+            </div>
             <input
-                type="checkbox"
-                className={styles.checkbox}
-                checked={completed}
-                onChange={() => props.handleChangeProps(id)}
+                type="text"
+                style={editMode}
+                className={textInput}
+                value={title}
+                onChange={e => {
+                    setUpdate(e.target.value, id)
+                }}
+                onKeyDown={handleUpdatedDone}
             />
-            <button onClick={() => props.delTodo(id)}>
-                Delete
-            </button>
-            <span style={completed ? completedStyle : null}>
-                {title}
-            </span>
         </li>
     )
 }
