@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Jest-red)
+![](https://img.shields.io/badge/Microverse-blue-violet)
 
 ## React Todo App
 
