@@ -1,3 +1,19 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
+## React Todo App
+
+> React Todo App allows you to create, edit, delete and view your todos. It is a simple todo app built with React, Linters and Localstorage.
+
+
+## Built With
+- React
+- Linters
+
+
+## Live Demo
+N/A
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +84,42 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Prerequisites
+- Having an IDE .
+- Having Git installed and configured.
+
+### Setup
+- Clone the repository using Git.
+- Open the project folder in your IDE.
+- Get the dependecies
+
+
+
+## Authors
+
+👤 *Author1*
+
+- GitHub: [@didierganthier](https://github.com/didierganthier)
+- Twitter: [@didierganthier_](https://twitter.com/didierganthier_)
+- LinkedIn: [didierganthier](https://linkedin.com/in/didierganthier)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
